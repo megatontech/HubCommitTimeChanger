@@ -10,14 +10,22 @@
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="299" VerticalAlignment="Top" Width="497">
             <TabItem Header="详细">
                 <Grid Background="#FFE5E5E5" Margin="0,1,0,-1">
-                    <DatePicker HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="164"/>
-                    <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="195" Margin="10,67,0,0" VerticalAlignment="Top" Width="164"/>
-                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,39,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="164"/>
-                    <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="286,10,0,0" VerticalAlignment="Top" Width="75"/>
-                    <ProgressBar HorizontalAlignment="Left" Height="38" Margin="179,224,0,0" VerticalAlignment="Top" Width="302"/>
-                    <Button x:Name="button1" Content="提交" HorizontalAlignment="Left" Margin="206,10,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="button2" Content="推送" HorizontalAlignment="Left" Margin="366,10,0,0" VerticalAlignment="Top" Width="75"/>
-                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="206,49,0,0" TextWrapping="Wrap" Text="Show me the code" VerticalAlignment="Top" Height="170" Width="235"/>
+                    <DatePicker x:Name="datepicker"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="186" DisplayDate="2016-06-06" AutomationProperties.IsRequiredForForm="True" IsTabStop="True" IsDropDownOpen="True"/>
+                    <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="195" Margin="10,67,0,0" VerticalAlignment="Top" Width="186">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                    <Grid>
+                                    <TextBlock Text="{Binding Path=text}" Margin="10 10" FontSize="12"></TextBlock>
+                                    </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" KeyDown="textBox_KeyDown"/>
+                    <Button x:Name="button" Content="改时间" HorizontalAlignment="Left" Margin="246,12,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+                    <ProgressBar HorizontalAlignment="Left" Height="38" Margin="206,224,0,0" VerticalAlignment="Top" Width="275"/>
+                    <Button x:Name="button1" Content="提交" HorizontalAlignment="Left" Margin="326,12,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.365,0.448"/>
+                    <Button x:Name="button2" Content="推送" HorizontalAlignment="Left" Margin="406,12,0,0" VerticalAlignment="Top" Width="75"/>
+                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="206,49,0,0" TextWrapping="Wrap" Text="Show me the code" VerticalAlignment="Top" Height="170" Width="275"/>
                 </Grid>
             </TabItem>
             <TabItem Header="概要">

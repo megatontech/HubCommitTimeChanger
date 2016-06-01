@@ -12,3 +12,16 @@ C:\Projects\WebCodeGenerateMVC\HubCommit\HubCommit\obj\Debug\HubCommit.Propertie
 C:\Projects\WebCodeGenerateMVC\HubCommit\HubCommit\obj\Debug\HubCommit.csproj.GenerateResource.Cache
 C:\Projects\WebCodeGenerateMVC\HubCommit\HubCommit\obj\Debug\HubCommit.exe
 C:\Projects\WebCodeGenerateMVC\HubCommit\HubCommit\obj\Debug\HubCommit.pdb
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\bin\Debug\HubCommit.exe.config
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\HubCommit.exe
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\HubCommit.pdb
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\bin\Debug\HubCommit.exe
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\bin\Debug\HubCommit.pdb
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\MainWindow.g.cs
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\App.g.cs
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\HubCommit_MarkupCompile.cache
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\HubCommit_MarkupCompile.lref
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\MainWindow.baml
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\HubCommit.g.resources
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\HubCommit.Properties.Resources.resources
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\HubCommit.csproj.GenerateResource.Cache
