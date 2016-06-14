@@ -25,3 +25,4 @@ C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\MainWindow.baml
 C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\HubCommit.g.resources
 C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\HubCommit.Properties.Resources.resources
 C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\HubCommit.csproj.GenerateResource.Cache
+C:\Projects\HubCommitTimeChanger\HubCommit\HubCommit\obj\Debug\HubCommit.csprojResolveAssemblyReference.cache
