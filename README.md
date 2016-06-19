@@ -1,6 +1,9 @@
 # HubCommitTimeChanger
 ## you see comrade ,when you got HubCommitTimeChanger you got endless shit commits
-####突然想到这个项目会很有趣，看到的其他的项目都是php写的，用c#重写一个好了
+### 效果展示如下，把贡献度刷满可以极大的提升开发者贡献代码的热情，就像是论坛每天签到一个心理作用
+![](https://github.com/megatontech/HubCommitTimeChanger/blob/master/FireShot15.png)
+![](https://github.com/megatontech/HubCommitTimeChanger/blob/master/FireShotCapture16.png)
+####运行界面（后续可以改成测试科技宽带访问的工具，这个破宽带每天都要断个几十次，想传代码几次传不上来就很恼怒，完全没心情继续写了！）
 ![](https://github.com/megatontech/HubCommitTimeChanger/blob/master/running.jpg)
 ##注意1：用了user32dll要以管理员身份运行，点击改时间即可随机修改系统时间，默认范围1年
 ***
