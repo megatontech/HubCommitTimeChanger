@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="AutoKey">
+</Property><Property Name="解决方案文件" Value="C:\Users\Administrator\Desktop\AutoKey\AutoKey.sln">
+</Property><Property Name="用户选项文件" Value="C:\Users\Administrator\Desktop\AutoKey\AutoKey.suo">
+</Property><Property Name="Date" Value="2012年5月16日">
+</Property><Property Name="Time" Value="12:40">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="AutoKey.sln" Description="文件已成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey.sln">
+</Event><Event ErrorLevel="0" Project="" Source="AutoKey.suo" Description="文件已成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey.suo">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\AutoKey.csproj" Description="项目文件已成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey\AutoKey.csproj">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\AutoKey.csproj.user" Description="项目用户文件成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey\AutoKey.csproj.user">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\AutoKey.cs" Description="文件已成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey\AutoKey.cs">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\AutoKey.Designer.cs" Description="文件已成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey\AutoKey.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\Program.cs" Description="文件已成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey\Program.cs">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\Properties\AssemblyInfo.cs" Description="文件已成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\Properties\Resources.Designer.cs" Description="文件已成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\Properties\Settings.Designer.cs" Description="文件已成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\Properties\Settings.settings" Description="文件已成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\key.ico" Description="文件已成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey\key.ico">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\AutoKey.resx" Description="文件已成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey\AutoKey.resx">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\Properties\Resources.resx" Description="文件已成功备份为 C:\Users\Administrator\Desktop\AutoKey\Backup\AutoKey\Properties\Resources.resx">
+</Event><Event ErrorLevel="1" Project="AutoKey" Source="AutoKey\AutoKey.csproj" Description="您的项目以 .NET Framework 2.0 或 3.0 为目标。如果您的项目使用的程序集需要更新的 .NET Framework，则项目生成将失败。通过单击项目菜单上的“属性”，然后在“.NET Framework”下拉框中选择一个新版本，可以更改 .NET Framework 的版本。(在 Visual Basic 中，可在单击“高级编辑器选项...”按钮时显示的“编译”选项卡上找到此下拉框。)">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\AutoKey.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="AutoKey" Source="AutoKey\AutoKey.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="AutoKey.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="AutoKey.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AutoKey" Source="AutoKey\AutoKey.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

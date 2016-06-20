@@ -1,0 +1,11 @@
+C:\Users\Administrator\Desktop\AutoKey\AutoKey\obj\Debug\AutoKey.exe
+C:\Users\Administrator\Desktop\AutoKey\AutoKey\obj\Debug\AutoKey.pdb
+C:\Users\Administrator\Desktop\AutoKey\AutoKey\bin\Debug\AutoKey.exe
+C:\Users\Administrator\Desktop\AutoKey\AutoKey\bin\Debug\AutoKey.pdb
+C:\Users\Administrator\Desktop\AutoKey\AutoKey\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\AutoKey\AutoKey\obj\Debug\WindowsApplication1.AutoKey.resources
+C:\Users\Administrator\Desktop\AutoKey\AutoKey\obj\Debug\AutoKey.Properties.Resources.resources
+C:\Users\Administrator\Desktop\AutoKey\AutoKey\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Administrator\Desktop\AutoKey\AutoKey\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Admin\Downloads\89523788AutoKey\AutoKey\AutoKey\obj\Debug\AutoKey.exe
+C:\Users\Admin\Downloads\89523788AutoKey\AutoKey\AutoKey\obj\Debug\AutoKey.pdb

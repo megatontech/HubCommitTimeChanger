@@ -1,0 +1,8 @@
+bin\Debug\AutoKey.exe
+bin\Debug\AutoKey.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\AutoKey.Properties.Resources.resources
+obj\Debug\AutoKey.csproj.GenerateResource.Cache
+obj\Debug\AutoKey.exe
+obj\Debug\AutoKey.pdb
+obj\Debug\AutoKey.KeyForm.resources

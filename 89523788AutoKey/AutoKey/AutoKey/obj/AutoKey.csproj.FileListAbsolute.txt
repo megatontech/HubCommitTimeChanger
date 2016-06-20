@@ -1,0 +1,16 @@
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\bin\Debug\AutoKey.exe
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\bin\Debug\AutoKey.pdb
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\obj\Debug\WindowsApplication1.AutoKey.resources
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\obj\Debug\AutoKey.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\obj\Debug\AutoKey.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\obj\Debug\AutoKey.exe
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\obj\Debug\AutoKey.pdb
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\bin\Release\AutoKey.exe
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\bin\Release\AutoKey.pdb
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\obj\Release\WindowsApplication1.AutoKey.resources
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\obj\Release\AutoKey.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\obj\Release\AutoKey.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\obj\Release\AutoKey.exe
+C:\Documents and Settings\Administrator\桌面\AutoKey\AutoKey\obj\Release\AutoKey.pdb
