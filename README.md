@@ -1,3 +1,5 @@
+##构建状态
+[![Build Status](https://travis-ci.org/megatontech/HubCommitTimeChanger.svg?branch=master)](https://travis-ci.org/megatontech/HubCommitTimeChanger)
 # HubCommitTimeChanger
 ## you see comrade ,when you got HubCommitTimeChanger you got endless shit commits
 ### 效果展示如下，把贡献度刷满可以极大的提升开发者贡献代码的热情，就像是论坛每天签到一个心理作用
