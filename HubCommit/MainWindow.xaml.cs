@@ -23,7 +23,7 @@ namespace HubCommit
             InitializeComponent();
             proc = new Process();
             listBox.ItemsSource = pendingDic;
-            datepicker.Text = "2015-06-06";
+            datepicker.Text = "2016-06-06";
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
             aTimer.Interval = 500;    // 1秒 = 1000毫秒
         }
@@ -94,7 +94,7 @@ namespace HubCommit
             {
                 int randomday = 0;
                 Random ran = new Random();
-                randomday = ran.Next(0,350)*-1;
+                randomday = ran.Next(0,150)*-1;
                 DateTime t = currentDate.AddDays(randomday);
                 SYSTEMTIME st = new SYSTEMTIME();
                 st.FromDateAndTime(t.Date, t);
