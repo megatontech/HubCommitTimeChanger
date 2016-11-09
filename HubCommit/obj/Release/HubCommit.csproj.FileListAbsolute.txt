@@ -1,0 +1,13 @@
+C:\Github\HubCommitTimeChanger\HubCommit\bin\Release\HubCommit.exe.config
+C:\Github\HubCommitTimeChanger\HubCommit\bin\Release\HubCommit.exe
+C:\Github\HubCommitTimeChanger\HubCommit\bin\Release\HubCommit.pdb
+C:\Github\HubCommitTimeChanger\HubCommit\obj\Release\MainWindow.g.cs
+C:\Github\HubCommitTimeChanger\HubCommit\obj\Release\App.g.cs
+C:\Github\HubCommitTimeChanger\HubCommit\obj\Release\HubCommit_MarkupCompile.cache
+C:\Github\HubCommitTimeChanger\HubCommit\obj\Release\HubCommit_MarkupCompile.lref
+C:\Github\HubCommitTimeChanger\HubCommit\obj\Release\MainWindow.baml
+C:\Github\HubCommitTimeChanger\HubCommit\obj\Release\HubCommit.g.resources
+C:\Github\HubCommitTimeChanger\HubCommit\obj\Release\HubCommit.Properties.Resources.resources
+C:\Github\HubCommitTimeChanger\HubCommit\obj\Release\HubCommit.csproj.GenerateResource.Cache
+C:\Github\HubCommitTimeChanger\HubCommit\obj\Release\HubCommit.exe
+C:\Github\HubCommitTimeChanger\HubCommit\obj\Release\HubCommit.pdb
