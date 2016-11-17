@@ -23,7 +23,7 @@ namespace HubCommit
             InitializeComponent();
             proc = new Process();
             listBox.ItemsSource = pendingDic;
-            datepicker.Text = "2016-06-06";
+            datepicker.Text = DateTime.Now.ToShortDateString();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
             aTimer.Interval = 500;    // 1秒 = 1000毫秒
         }
@@ -73,19 +73,6 @@ namespace HubCommit
 
         #region Method
         /// <summary>
-        /// smart 的提交快捷键，只要激活就可以提交
-        /// </summary>
-        public void performCommit()
-        {
-            //currLoop++;
-            //if (maxLoop>currLoop)
-            //{
-            //    SendKeys.Send("^{K}");
-            //    SendKeys.Send("^{V}");
-            //    SendKeys.Send("%{C}");
-            //}
-        }
-        /// <summary>
         /// 调用win32API修改系统时间
         /// </summary>
         /// <returns></returns>
@@ -94,63 +81,13 @@ namespace HubCommit
             {
                 int randomday = 0;
                 Random ran = new Random();
-                randomday = ran.Next(0,150)*-1;
+                randomday = ran.Next(0,80)*-1;
                 DateTime t = currentDate.AddDays(randomday);
                 SYSTEMTIME st = new SYSTEMTIME();
                 st.FromDateAndTime(t.Date, t);
                 Win32API.SetLocalTime(ref st);
             }
             return true;
-        }
-
-        /// <summary>
-        /// 执行CMD语句，经测试win10下不能用，废弃
-        /// </summary>
-        /// <param name="cmd">要执行的CMD命令</param>
-        public void RunCmd(string cmd)
-        {
-            proc.StartInfo.CreateNoWindow = true;
-            proc.StartInfo.FileName = "cmd.exe";
-            proc.StartInfo.UseShellExecute = false;
-            proc.StartInfo.RedirectStandardError = true;
-            proc.StartInfo.RedirectStandardInput = true;
-            proc.StartInfo.RedirectStandardOutput = true;
-            proc.Start();
-            proc.StandardInput.WriteLine(cmd);
-            string output = proc.StandardOutput.ReadToEnd();
-            proc.WaitForExit();
-            proc.Close();
-        }
-
-        /// <summary>
-        /// 打开软件并执行命令，经测试win10下不能用，废弃
-        /// </summary>
-        /// <param name="programName">软件路径加名称（.exe文件）</param>
-        /// <param name="cmd">要执行的命令</param>
-        public void RunProgram(string programName, string cmd)
-        {
-            Process proc = new Process();
-            proc.StartInfo.CreateNoWindow = true;
-            proc.StartInfo.FileName = programName;
-            proc.StartInfo.UseShellExecute = false;
-            proc.StartInfo.RedirectStandardError = true;
-            proc.StartInfo.RedirectStandardInput = true;
-            proc.StartInfo.RedirectStandardOutput = true;
-            proc.Start();
-            if (cmd.Length != 0)
-            {
-                proc.StandardInput.WriteLine(cmd);
-            }
-            proc.Close();
-        }
-
-        /// <summary>
-        /// 打开软件，经测试win10下不能用，废弃
-        /// </summary>
-        /// <param name="programName">软件路径加名称（.exe文件）</param>
-        public void RunProgram(string programName)
-        {
-            this.RunProgram(programName, "");
         }
 
         #endregion Method
