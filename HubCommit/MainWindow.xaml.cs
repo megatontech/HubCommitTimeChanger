@@ -81,7 +81,7 @@ namespace HubCommit
             {
                 int randomday = 0;
                 Random ran = new Random();
-                randomday = ran.Next(0,80)*-1;
+                randomday = ran.Next(0,365)*1;
                 DateTime t = currentDate.AddDays(randomday);
                 SYSTEMTIME st = new SYSTEMTIME();
                 st.FromDateAndTime(t.Date, t);
