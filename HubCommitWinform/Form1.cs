@@ -26,7 +26,7 @@ namespace HubCommitWinform
         {
             InitializeComponent();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            aTimer.Interval = 20000;    // 1秒 = 1000毫秒
+            aTimer.Interval = 500;    // 1秒 = 1000毫秒
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,12 +47,15 @@ namespace HubCommitWinform
                 SYSTEMTIME st = new SYSTEMTIME();
                 st.FromDateAndTime(t.Date, t);
                 Win32API.SetLocalTime(ref st);
-                string randomid = Guid.NewGuid().ToString();
-                //System.Windows.Clipboard.SetDataObject(randomid);
-                SendKeys.SendWait("{DOWN}");
-                SendKeys.SendWait("^{k}");
-                SendKeys.SendWait("^{v}");
-                SendKeys.SendWait("%{c}");
+                //string randomid = Guid.NewGuid().ToString();
+                ////System.Windows.Clipboard.SetDataObject(randomid);
+                //SendKeys.SendWait("{DOWN}");
+
+                //SendKeys.SendWait("^{k}");
+                //for (int i = 0; i < 99999; i++) { }
+                //SendKeys.SendWait("^{v}");
+                //for (int i = 0; i < 99999; i++) { }
+                //SendKeys.SendWait("%{c}");
                 //IntPtr smartgitHandle = FindWindow("SWT_Window0", null);
                 //if (smartgitHandle == IntPtr.Zero)
                 //{
