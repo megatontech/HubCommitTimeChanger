@@ -9,3 +9,14 @@ C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommitWinform\obj\Debug\HubCom
 C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommitWinform\obj\Debug\HubCommitWinform.csproj.GenerateResource.Cache
 C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommitWinform\obj\Debug\HubCommitWinform.exe
 C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommitWinform\obj\Debug\HubCommitWinform.pdb
+D:\Github\HubCommitTimeChanger\HubCommitWinform\bin\Debug\HubCommitWinform.exe.config
+D:\Github\HubCommitTimeChanger\HubCommitWinform\obj\Debug\HubCommitWinform.exe
+D:\Github\HubCommitTimeChanger\HubCommitWinform\obj\Debug\HubCommitWinform.pdb
+D:\Github\HubCommitTimeChanger\HubCommitWinform\bin\Debug\HubCommitWinform.exe
+D:\Github\HubCommitTimeChanger\HubCommitWinform\bin\Debug\HubCommitWinform.pdb
+D:\Github\HubCommitTimeChanger\HubCommitWinform\bin\Debug\HubCommit.exe
+D:\Github\HubCommitTimeChanger\HubCommitWinform\bin\Debug\HubCommit.pdb
+D:\Github\HubCommitTimeChanger\HubCommitWinform\obj\Debug\HubCommitWinform.csprojResolveAssemblyReference.cache
+D:\Github\HubCommitTimeChanger\HubCommitWinform\obj\Debug\HubCommitWinform.Form1.resources
+D:\Github\HubCommitTimeChanger\HubCommitWinform\obj\Debug\HubCommitWinform.Properties.Resources.resources
+D:\Github\HubCommitTimeChanger\HubCommitWinform\obj\Debug\HubCommitWinform.csproj.GenerateResource.Cache

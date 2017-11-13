@@ -47,28 +47,6 @@ namespace HubCommitWinform
                 SYSTEMTIME st = new SYSTEMTIME();
                 st.FromDateAndTime(t.Date, t);
                 Win32API.SetLocalTime(ref st);
-                //string randomid = Guid.NewGuid().ToString();
-                ////System.Windows.Clipboard.SetDataObject(randomid);
-                //SendKeys.SendWait("{DOWN}");
-
-                //SendKeys.SendWait("^{k}");
-                //for (int i = 0; i < 99999; i++) { }
-                //SendKeys.SendWait("^{v}");
-                //for (int i = 0; i < 99999; i++) { }
-                //SendKeys.SendWait("%{c}");
-                //IntPtr smartgitHandle = FindWindow("SWT_Window0", null);
-                //if (smartgitHandle == IntPtr.Zero)
-                //{
-                //    System.Windows.MessageBox.Show("smartgit is not running.");
-                //}
-                //else
-                //{
-                //    SetForegroundWindow(smartgitHandle);
-                //    SendKeys.SendWait("{DOWN}");
-                //    SendKeys.SendWait("^+{k}");
-                //    SendKeys.SendWait("^+{v}");
-                //    SendKeys.SendWait("^+{c}");
-                //}
             }
             return true;
         }

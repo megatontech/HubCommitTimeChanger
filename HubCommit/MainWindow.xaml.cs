@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Windows;
-using System.Timers;
-using System.Windows.Forms;
+using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
+using System.Timers;
+using System.Windows;
 
 namespace HubCommit
 {
@@ -17,19 +18,20 @@ namespace HubCommit
         private ObservableCollection<ViewModel> pendingDic = new ObservableCollection<ViewModel>();
         private System.Timers.Timer aTimer = new System.Timers.Timer();
         private DateTime currentDate = DateTime.Now;
-        private int maxLoop = 99;
-        private int currLoop = 0;
+        private string sourcePath = "";
+        private string destPath = "";
+        private string repoPath = @"D:\Github\FreeIOT";
+
         public MainWindow()
         {
             InitializeComponent();
             proc = new Process();
-            listBox.ItemsSource = pendingDic;
-            datepicker.Text = DateTime.Now.ToShortDateString();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            aTimer.Interval = 2000;    // 1秒 = 1000毫秒
+            aTimer.Interval = 5000;    // 1秒 = 1000毫秒
         }
 
         #region Event
+
         /// <summary>
         /// Timer的Elapsed事件处理程序
         /// </summary>
@@ -38,8 +40,8 @@ namespace HubCommit
         private void OnTimedEvent(object source, ElapsedEventArgs e)
         {
             changeCurrDateTime();
-            //performCommit();
         }
+
         /// <summary>
         /// 修改时间
         /// </summary>
@@ -49,30 +51,67 @@ namespace HubCommit
         {
             aTimer.Start();
         }
-
         /// <summary>
-        /// 暂存列表
+        /// 结束
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void textBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        private void button1_Click(object sender, RoutedEventArgs e)
         {
+            aTimer.Stop();
+        }
+        /// <summary>
+        /// push
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            aTimer.Stop();
+        }
 
-            if (e.Key == System.Windows.Input.Key.Enter && datepicker.SelectedDate!=null)
+        /// <summary>
+        /// 源
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button7_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new Microsoft.Win32.OpenFileDialog()
             {
-                DateTime t = DateTime.Now;
-                SYSTEMTIME stimt = new SYSTEMTIME();
-                stimt.FromDateAndTime(datepicker.SelectedDate.Value, t);
-                ViewModel model = new ViewModel();
-                model.st = stimt;
-                model.text = textBox.Text;
-                pendingDic.Add(model);
+            };
+            var result = openFileDialog.ShowDialog();
+            if (result == true)
+            {
+                string filePath = openFileDialog.FileName;
+                sourcePath = filePath.Remove(openFileDialog.FileName.LastIndexOf(@"\"), (openFileDialog.FileName.Length - openFileDialog.FileName.LastIndexOf(@"\")));
             }
         }
 
+        
+
+
+        /// <summary>
+        /// 目标
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button6_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new Microsoft.Win32.OpenFileDialog()
+            {
+            };
+            var result = openFileDialog.ShowDialog();
+            if (result == true)
+            {
+                string filePath = openFileDialog.FileName;
+                destPath = filePath.Remove(openFileDialog.FileName.LastIndexOf(@"\"), (openFileDialog.FileName.Length - openFileDialog.FileName.LastIndexOf(@"\")));
+            }
+        }
         #endregion Event
 
         #region Method
+
         /// <summary>
         /// 调用win32API修改系统时间
         /// </summary>
@@ -82,63 +121,57 @@ namespace HubCommit
             {
                 int randomday = 0;
                 Random ran = new Random();
-                randomday = ran.Next(0,365)*1;
+                randomday = ran.Next(0, 365) * 1;
                 DateTime t = currentDate.AddDays(randomday);
                 SYSTEMTIME st = new SYSTEMTIME();
                 st.FromDateAndTime(t.Date, t);
                 Win32API.SetLocalTime(ref st);
-                string randomid = Guid.NewGuid().ToString();
-                System.Windows.Clipboard.SetDataObject(randomid);
-                SendKeys.SendWait("{DOWN}");
-                SendKeys.SendWait("^+{k}");
-                SendKeys.SendWait("^+{v}");
-                SendKeys.SendWait("^+{c}");
-                //IntPtr smartgitHandle = FindWindow("SWT_Window0", null);
-                //if (smartgitHandle == IntPtr.Zero)
-                //{
-                //    System.Windows.MessageBox.Show("smartgit is not running.");
-                //}
-                //else
-                //{
-                //    SetForegroundWindow(smartgitHandle);
-                //    SendKeys.SendWait("{DOWN}");
-                //    SendKeys.SendWait("^+{k}");
-                //    SendKeys.SendWait("^+{v}");
-                //    SendKeys.SendWait("^+{c}");
-                //}
+                gitOperation();
             }
             return true;
         }
 
+        public void gitOperation()
+        {
+            string randomid = Guid.NewGuid().ToString();
+            string str = Console.ReadLine();
+            System.Diagnostics.Process p = new System.Diagnostics.Process();
+            p.StartInfo.FileName = "cmd.exe";
+            p.StartInfo.UseShellExecute = false;    //是否使用操作系统shell启动
+            p.StartInfo.RedirectStandardInput = true;//接受来自调用程序的输入信息
+            p.StartInfo.RedirectStandardOutput = true;//由调用程序获取输出信息
+            p.StartInfo.RedirectStandardError = true;//重定向标准错误输出
+            p.StartInfo.CreateNoWindow = true;//不显示程序窗口
+            p.Start();//启动程序
+            p.StandardInput.WriteLine(@"move /Y " + GetFirstFileStr(sourcePath) + " "+ destPath + " ");//向cmd窗口发送输入信息
+            p.StandardInput.WriteLine(@"cd "+ repoPath + "");//向cmd窗口发送输入信息
+            p.StandardInput.WriteLine(@"git add .");//向cmd窗口发送输入信息
+            p.StandardInput.WriteLine(@"git commit -m "+ randomid + "");//向cmd窗口发送输入信息
+            p.StandardInput.AutoFlush = true;
+            string output = p.StandardOutput.ReadToEnd();
+            p.WaitForExit();//等待程序执行完退出进程
+            p.Close();
+            Console.WriteLine(output);
+        }
+
+        public string GetFirstFileStr(string path)
+        {
+            string filePath = "";
+            DirectoryInfo TheFolder = new DirectoryInfo(path);
+            filePath = TheFolder.GetFiles().FirstOrDefault().FullName;
+            return filePath;
+
+        }
         #endregion Method
+
         [DllImport("USER32.DLL", CharSet = CharSet.Unicode)]
-        public static extern IntPtr FindWindow(string lpClassName,string lpWindowName);
+        public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
 
         // Activate an application window.
         [DllImport("USER32.DLL")]
         public static extern bool SetForegroundWindow(IntPtr hWnd);
-        private void datepicker_SelectedDateChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-            if (datepicker.SelectedDate != null)
-            {
-                DateTime t = DateTime.Now;
-                SYSTEMTIME st = new SYSTEMTIME();
-                st.FromDateAndTime(datepicker.SelectedDate.Value, t);
-                Win32API.SetLocalTime(ref st);
-            }
-            //RunCmd("date "+ (datepicker.SelectedDate.HasValue?DateTime.Now.ToString("yyyy/MM/dd") :datepicker.SelectedDate.Value.ToString("yyyy/MM/dd")));
-        }
 
-        private void datepicker_CalendarClosed(object sender, RoutedEventArgs e)
-        {
-            if (datepicker.SelectedDate != null)
-            {
-                DateTime t = DateTime.Now;
-                SYSTEMTIME st = new SYSTEMTIME();
-                st.FromDateAndTime(datepicker.SelectedDate.Value, t);
-                Win32API.SetLocalTime(ref st);
-            }
-        }
+        
     }
 
     public class ViewModel
