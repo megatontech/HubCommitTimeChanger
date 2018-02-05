@@ -4,8 +4,11 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 using System.Timers;
 using System.Windows;
+using System.Windows.Media.Imaging;
+using System.Windows.Resources;
 
 namespace HubCommit
 {
@@ -17,7 +20,7 @@ namespace HubCommit
         private Process proc = null;
         private ObservableCollection<ViewModel> pendingDic = new ObservableCollection<ViewModel>();
         private System.Timers.Timer aTimer = new System.Timers.Timer();
-        private DateTime currentDate = DateTime.Now;
+        private static DateTime currentDate = DateTime.Now;
         private string sourcePath = "";
         private string destPath = "";
         private string repoPath = @"D:\Github\FreeIOT";
@@ -25,9 +28,10 @@ namespace HubCommit
         public MainWindow()
         {
             InitializeComponent();
+            Label3.Content = currentDate.ToString("yyyy-MM-dd hh:mm:ss");
             proc = new Process();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            aTimer.Interval = 5000;    // 1秒 = 1000毫秒
+            aTimer.Interval = 2000;    // 1秒 = 1000毫秒
         }
 
         #region Event
@@ -51,6 +55,7 @@ namespace HubCommit
         {
             aTimer.Start();
         }
+
         /// <summary>
         /// 结束
         /// </summary>
@@ -60,6 +65,7 @@ namespace HubCommit
         {
             aTimer.Stop();
         }
+
         /// <summary>
         /// push
         /// </summary>
@@ -85,11 +91,9 @@ namespace HubCommit
             {
                 string filePath = openFileDialog.FileName;
                 sourcePath = filePath.Remove(openFileDialog.FileName.LastIndexOf(@"\"), (openFileDialog.FileName.Length - openFileDialog.FileName.LastIndexOf(@"\")));
+                Label1.Content = sourcePath;
             }
         }
-
-        
-
 
         /// <summary>
         /// 目标
@@ -106,8 +110,10 @@ namespace HubCommit
             {
                 string filePath = openFileDialog.FileName;
                 destPath = filePath.Remove(openFileDialog.FileName.LastIndexOf(@"\"), (openFileDialog.FileName.Length - openFileDialog.FileName.LastIndexOf(@"\")));
+                Label2.Content = destPath;
             }
         }
+
         #endregion Event
 
         #region Method
@@ -122,6 +128,7 @@ namespace HubCommit
                 int randomday = 0;
                 Random ran = new Random();
                 randomday = ran.Next(0, 365) * 1;
+                randomday = randomday * (randomday % 2 == 1 ? -1 : 1);
                 DateTime t = currentDate.AddDays(randomday);
                 SYSTEMTIME st = new SYSTEMTIME();
                 st.FromDateAndTime(t.Date, t);
@@ -143,10 +150,10 @@ namespace HubCommit
             p.StartInfo.RedirectStandardError = true;//重定向标准错误输出
             p.StartInfo.CreateNoWindow = true;//不显示程序窗口
             p.Start();//启动程序
-            p.StandardInput.WriteLine(@"move /Y " + GetFirstFileStr(sourcePath) + " "+ destPath + " ");//向cmd窗口发送输入信息
-            p.StandardInput.WriteLine(@"cd "+ repoPath + "");//向cmd窗口发送输入信息
+            p.StandardInput.WriteLine(@"move /Y " + GetFirstFileStr(sourcePath) + " " + destPath + " ");//向cmd窗口发送输入信息
+            p.StandardInput.WriteLine(@"cd " + destPath + "");//向cmd窗口发送输入信息
             p.StandardInput.WriteLine(@"git add .");//向cmd窗口发送输入信息
-            p.StandardInput.WriteLine(@"git commit -m "+ randomid + "");//向cmd窗口发送输入信息
+            p.StandardInput.WriteLine(@"git commit -m " + randomid + "");//向cmd窗口发送输入信息
             p.StandardInput.AutoFlush = true;
             string output = p.StandardOutput.ReadToEnd();
             p.WaitForExit();//等待程序执行完退出进程
@@ -159,9 +166,10 @@ namespace HubCommit
             string filePath = "";
             DirectoryInfo TheFolder = new DirectoryInfo(path);
             filePath = TheFolder.GetFiles().FirstOrDefault().FullName;
+            
             return filePath;
-
         }
+
         #endregion Method
 
         [DllImport("USER32.DLL", CharSet = CharSet.Unicode)]
@@ -170,8 +178,6 @@ namespace HubCommit
         // Activate an application window.
         [DllImport("USER32.DLL")]
         public static extern bool SetForegroundWindow(IntPtr hWnd);
-
-        
     }
 
     public class ViewModel

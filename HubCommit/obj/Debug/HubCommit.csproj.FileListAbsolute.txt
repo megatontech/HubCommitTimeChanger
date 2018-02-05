@@ -1,7 +1,6 @@
 D:\Github\HubCommitTimeChanger\HubCommit\bin\Debug\HubCommit.exe.config
 D:\Github\HubCommitTimeChanger\HubCommit\bin\Debug\HubCommit.exe
 D:\Github\HubCommitTimeChanger\HubCommit\bin\Debug\HubCommit.pdb
-D:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\HubCommit.csprojResolveAssemblyReference.cache
 D:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\MainWindow.g.cs
 D:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\App.g.cs
 D:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\HubCommit_MarkupCompile.cache
@@ -10,5 +9,7 @@ D:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\MainWindow.baml
 D:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\HubCommit.g.resources
 D:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\HubCommit.Properties.Resources.resources
 D:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\HubCommit.csproj.GenerateResource.Cache
+D:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\HubCommit.csproj.CoreCompileInputs.cache
 D:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\HubCommit.exe
 D:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\HubCommit.pdb
+D:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\HubCommit.csprojResolveAssemblyReference.cache

@@ -20,3 +20,5 @@ D:\Github\HubCommitTimeChanger\HubCommitWinform\obj\Debug\HubCommitWinform.cspro
 D:\Github\HubCommitTimeChanger\HubCommitWinform\obj\Debug\HubCommitWinform.Form1.resources
 D:\Github\HubCommitTimeChanger\HubCommitWinform\obj\Debug\HubCommitWinform.Properties.Resources.resources
 D:\Github\HubCommitTimeChanger\HubCommitWinform\obj\Debug\HubCommitWinform.csproj.GenerateResource.Cache
+D:\Github\HubCommitTimeChanger\HubCommitWinform\bin\Debug\HubCommit.exe.config
+D:\Github\HubCommitTimeChanger\HubCommitWinform\obj\Debug\HubCommitWinform.csproj.CoreCompileInputs.cache
