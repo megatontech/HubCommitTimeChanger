@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HubCommit", "HubCommit\HubCommit.csproj", "{A9393BAE-ED72-47D6-8793-3F0496DCC89D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HubCommitWinform", "HubCommitWinform\HubCommitWinform.csproj", "{CA4DAE9B-A69D-4C64-A1BB-33BFB829BEF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A9393BAE-ED72-47D6-8793-3F0496DCC89D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9393BAE-ED72-47D6-8793-3F0496DCC89D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9393BAE-ED72-47D6-8793-3F0496DCC89D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA4DAE9B-A69D-4C64-A1BB-33BFB829BEF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4DAE9B-A69D-4C64-A1BB-33BFB829BEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA4DAE9B-A69D-4C64-A1BB-33BFB829BEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4DAE9B-A69D-4C64-A1BB-33BFB829BEF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
