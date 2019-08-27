@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Windows;
 using System.Timers;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace HubCommit
 {
@@ -25,7 +26,7 @@ namespace HubCommit
             listBox.ItemsSource = pendingDic;
             datepicker.Text = DateTime.Now.ToShortDateString();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            aTimer.Interval = 500;    // 1秒 = 1000毫秒
+            aTimer.Interval = 2000;    // 1秒 = 1000毫秒
         }
 
         #region Event
@@ -86,12 +87,36 @@ namespace HubCommit
                 SYSTEMTIME st = new SYSTEMTIME();
                 st.FromDateAndTime(t.Date, t);
                 Win32API.SetLocalTime(ref st);
+                string randomid = Guid.NewGuid().ToString();
+                System.Windows.Clipboard.SetDataObject(randomid);
+                SendKeys.SendWait("{DOWN}");
+                SendKeys.SendWait("^+{k}");
+                SendKeys.SendWait("^+{v}");
+                SendKeys.SendWait("^+{c}");
+                //IntPtr smartgitHandle = FindWindow("SWT_Window0", null);
+                //if (smartgitHandle == IntPtr.Zero)
+                //{
+                //    System.Windows.MessageBox.Show("smartgit is not running.");
+                //}
+                //else
+                //{
+                //    SetForegroundWindow(smartgitHandle);
+                //    SendKeys.SendWait("{DOWN}");
+                //    SendKeys.SendWait("^+{k}");
+                //    SendKeys.SendWait("^+{v}");
+                //    SendKeys.SendWait("^+{c}");
+                //}
             }
             return true;
         }
 
         #endregion Method
+        [DllImport("USER32.DLL", CharSet = CharSet.Unicode)]
+        public static extern IntPtr FindWindow(string lpClassName,string lpWindowName);
 
+        // Activate an application window.
+        [DllImport("USER32.DLL")]
+        public static extern bool SetForegroundWindow(IntPtr hWnd);
         private void datepicker_SelectedDateChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (datepicker.SelectedDate != null)

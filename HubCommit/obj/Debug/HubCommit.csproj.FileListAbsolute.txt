@@ -68,3 +68,16 @@ E:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\MainWindow.baml
 E:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\HubCommit.g.resources
 E:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\HubCommit.Properties.Resources.resources
 E:\Github\HubCommitTimeChanger\HubCommit\obj\Debug\HubCommit.csproj.GenerateResource.Cache
+C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommit\bin\Debug\HubCommit.exe.config
+C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommit\bin\Debug\HubCommit.exe
+C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommit\bin\Debug\HubCommit.pdb
+C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommit\obj\Debug\MainWindow.g.cs
+C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommit\obj\Debug\App.g.cs
+C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommit\obj\Debug\HubCommit_MarkupCompile.cache
+C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommit\obj\Debug\HubCommit_MarkupCompile.lref
+C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommit\obj\Debug\MainWindow.baml
+C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommit\obj\Debug\HubCommit.g.resources
+C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommit\obj\Debug\HubCommit.Properties.Resources.resources
+C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommit\obj\Debug\HubCommit.csproj.GenerateResource.Cache
+C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommit\obj\Debug\HubCommit.exe
+C:\Users\Uzai\Desktop\HubCommitTimeChanger.git\HubCommit\obj\Debug\HubCommit.pdb
